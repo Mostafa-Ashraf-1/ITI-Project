@@ -1,0 +1,322 @@
+[
+  {
+    "question": "متى يبدأ سريان القانون المدني؟",
+    "contexts": [
+      {
+        "text": "مادة ١\nيلغي القانون المدني المعمول به أمام المحاكم الوطنية والصادر في ٨٢ أكتوبر سنة\n٣٨٨١ والقانون المدني المعمول به أمام المحاكم المختلطة والصادر في ٨٢ يونيو\nسنة ٥٧٨١ ويستعاض عنهما بالقانون المدني المرافق لهذا القانون",
+        "article": -1,
+        "page": 0,
+        "section": "",
+        "score": 0.7299303412437439
+      },
+      {
+        "text": "مادة ٢\nعلى وزير العدل تنفيذ هذا القانون ويعمل به ابتداء من ١٥ أكتوبر سنة\n.٩٤٩١\nنأمر بأن يبصم هذا القانون بخاتم الدولة وأن ينشر في الجريدة الرسمية وينفذ\nكقانون من قوانين الدولة.\nصدر بقصر القبة في ٩ رمضان سنة ٧٦٣١ ٦١ يوليو سنة ٨٤٩١\nنصوص القانون المدنى\nباب تمهيدي\nأحكام عامة\nالفصل الأول\nالقانون وتطبيقه\nSECTION I\nLaws and their Applications\n١ -القانون والحق 1. Laws and Rights",
+        "article": -1,
+        "page": 0,
+        "section": "",
+        "score": 0.5554472208023071
+      },
+      {
+        "text": "مادة٢٧١\n( ١ (تسقط بالتقادم دعوى التعويض الناشئة عن العمل غير المشروع\nبانقضاء ثلاث سنوات من اليوم الذى علم فيه المضرور بحدوث الفور\nوبالشخص المسئول عنه. وتسقط هذه الدعوى فى كل حال ، بإنقضاء خمس\nعشرة سنة من يوم وقوع العمل غير المشروع.\n( ٢ (على انه إذا كانت هذه الدعوى ناشئة عن جريمة ، وكانت الدعوى\nالجنائية لم تسقط بعد انقضاء المواعيد المذكورة فى الفقرة السابقة ، فإن\nدعوى التعويض لا تسقط الا بسقوط الدعوى الجنائية.\nArticle 172\nAn action for damages arising from an unlawful act is\nprescribed after three years from the date upon which\nthe victim knew of the injury and identity of the person\nwho was responsible. An action for damages is\nprescribed in any case after fifteen years from the date\non which the unlawful act was committed.\nWhen a claim arises out of a penal offence and the penal\naction is not prescribed after the delays set out in the\npreceding paragraph, the action for damages is only\nprescribed when the penal action itself is prescribed.\n٢ - المسئولية عن عمل الغير 2- Liability arising from the acts of another",
+        "article": 172,
+        "page": 19,
+        "section": "SECTION III",
+        "score": 0.5482719540596008
+      }
+    ],
+    "answer": "Based on the retrieved text (p. 0): مادة ١ يلغي القانون المدني المعمول به أمام المحاكم الوطنية والصادر في ٨٢ أكتوبر سنة ٣٨٨١ والقانون المدني المعمول به أمام المحاكم المختلطة والصادر في ٨٢ يونيو سنة ٥٧٨١ ويستعاض عنهما بالقانون المدني المرافق لهذا القانون",
+    "sources": [
+      "p.0",
+      "p.0",
+      "Article 172 (p.19)"
+    ]
+  },
+  {
+    "question": "ما هي أهلية القاصر الذي بلغ ثماني عشرة سنة؟",
+    "contexts": [
+      {
+        "text": "مادة٤٣(\n)١ (تتكون أسرة الشخص من ذوى قرباه.\n)٢ (ويعتبر من ذوى القربى كل من يجمعهم أصل مشترك.\nArticle 34\nThe family of a person is composed of his relatives.\nPersons having a common ascendant are deemed to be\nrelatives.",
+        "article": 34,
+        "page": 4,
+        "section": "SECTION II",
+        "score": 0.398762047290802
+      },
+      {
+        "text": "مادة٢٤(\n(١ (موطن القاصر والمحجور عليه والمفقود والغائب هو موطن من ينوب\nArticle 42\nThe domicile of a minor, a person under legal disability, a\nعن هؤلاء قانوناً .\n(٢ (ومع ذلك يكون للقاصر الذي بلغ ثماني عشرة سنة ومن في حكمه\nموطن خاص، بالنسبة الى الأعمال والتصرفات التي يعتبره القانون أهلاً\nلمباشرتها .\nmissing person or an absent person will be the domicile\nof his legal representative.\nA minor who has attained eighteen years and a person in\na similar legal position shall nevertheless have his special\ndomicile in respect of acts he is capable of performing in\naccordance with the law.",
+        "article": 42,
+        "page": 4,
+        "section": "SECTION II",
+        "score": 0.37789058685302734
+      },
+      {
+        "text": "مادة٨٣ (\nيكون لكل شخص اسم ولقب ، ولقب الشخص يلحق أولاده .\nArticle 38\nEvery person must have a first name and a family name.\nThe family name of a person is bestowed upon his\nchildren.",
+        "article": 38,
+        "page": 4,
+        "section": "SECTION II",
+        "score": 0.3619960844516754
+      }
+    ],
+    "answer": "Based on the retrieved text (Article 34, p. 4): مادة٤٣( )١ (تتكون أسرة الشخص من ذوى قرباه. )٢ (ويعتبر من ذوى القربى كل من يجمعهم أصل مشترك. Article 34 The family of a person is composed of his relatives. Persons having a common ascendant are deemed to be relatives.",
+    "sources": [
+      "Article 34 (p.4)",
+      "Article 42 (p.4)",
+      "Article 38 (p.4)"
+    ]
+  },
+  {
+    "question": "ما حكم العقد الذي أبرمه النائب في حدود نيابته؟",
+    "contexts": [
+      {
+        "text": "مادة٧٥١\n( ١ (فى العقود الملزمة للجانبين ، إذا لم يوف أحد المتعاقدين بإلتزامه جاز\nللمتعاقد الآخر بعد اعذاره المدين أن يطالب بتنفيذ العقد أو بفسخه ، مع\nالتعويض فى الهالتين أن كان له مقتض.\n( ٢ (ويجوز للقاضى أن يمنح المدين اجلا إذا اقتضت الظروف ذلك ، كما\nيجوز له أن يرفض الفسخ إذا كان ما لم يرف به المدين قليل الأهمية\nبالنسبة إلى الإلتزام فى جملته.\nArticle 157\nIn bilateral contracts (contrats synallagmatiques) if one\nof the parties does not perform his obligation, the other\nparty may, after serving a formal summons on the\ndebtor, demand the performance of the contract or its\nrescission, with damages, if due, in either case. The judge\nmay grant additional time to the debtor, if it is necessary\nas a result of the circumstances.\nThe judge may also reject an application for rescission\nwhen the part of the contract which the debtor has\nfailed to perform is of little importance in comparison\nwith the obligation in its entirety.",
+        "article": 157,
+        "page": 17,
+        "section": "الفصل الأول",
+        "score": 0.5958325266838074
+      },
+      {
+        "text": "مادة٠٩٠١\n)١ (يدون رئيس المحكمة فى ذيل العريضة أمره بالاختصاص .\n)٢ (وإنما يجب عليه عند الترخيص به أن يراعى مقدار الدين وقمة\nالعقارات المبينة بالعريض ة بوجه التقريب ، وعند الاقتضاء يجعل\nالاختصاص مقصورا على بعض هذه العقارات أو على واحد منها فقط أو\nعلى جزء من أحدها إذا رأى ان ذلك كاف لتأمين دفع أصل الدين والفوائد\nوالمصروفات المستحقة للدائنين.\nArticle 1090 The President of the Court will record his\norder for a judgment charge at the foot of the\napplication. The President of the Court should, however,\nin giving an order for a judgment charge, take into\nconsideration the amount of the debt and the\napproximate value of the immovable properties set out\nin the application, and should, if necessary, restrict the\njudgment charge to some or only one of these\nimmovables, or to a part in an immovable if he considers\nthat this is sufficient to secure the principal of the debt,\nthe interest thereon and the cost thereof due to the\ncreditors.",
+        "article": 1090,
+        "page": 158,
+        "section": "الفصل الأول",
+        "score": 0.5512453317642212
+      },
+      {
+        "text": "مادة٦٢٢\nإذا كان محل الالتزام مبلغاً من الن قود وكان معلوم المقدار وقت الطلب\nوتأخر المدين في الوفاء به، كان ملزما بأن يدفع للدائن على سبيل التعويض\nعن التأخر فوائد قدرها أربعة في المائة في المسائل المدنية وخمسة في\nالمائة في المسائل التجارية .وتسرى هذه الفوائد من تاريخ المطالبة\nالقضائية\nا أن لم يحدد الاتفاق أو العرف التجاري تاريخا آخر لسريانها،\nوهذا كله ما لم ينص القانون على غيره.\nArticle 226\nWhen the object of an obligation is the payment of a\nsum of money of which the amount is known at the time\nwhen the claim is made, the debtor shall be bound, in\ncase of delay in payment, to pay to the creditor, as\ndamages for the delay, interest at the rate of four\npercent in civil matters and five percent in commercial\nmatters. Such interest shall run from the date of the\nclaim in court, unless the contract or commercial usage\nfixes another date. This Article shall apply, unless\notherwise provided in law.",
+        "article": 226,
+        "page": 27,
+        "section": "الفصل الثانى",
+        "score": 0.5499342679977417
+      }
+    ],
+    "answer": "Based on the retrieved text (Article 157, p. 17): مادة٧٥١ ( ١ (فى العقود الملزمة للجانبين ، إذا لم يوف أحد المتعاقدين بإلتزامه جاز للمتعاقد الآخر بعد اعذاره المدين أن يطالب بتنفيذ العقد أو بفسخه ، مع التعويض فى الهالتين أن كان له مقتض. ( ٢ (ويجوز للقاضى أن يمنح المدين اجلا إذا اقتضت الظروف ذلك ، كما يجوز له أن يرفض الفسخ إذا كان ما لم يرف به المدين قليل الأهمية بالنسبة إلى الإلتزام فى جملته. Article 157 In bilateral contracts (contrats synallagmatiques) if one of the parties does not perform his obligation, the other party may, after serving a ...",
+    "sources": [
+      "Article 157 (p.17)",
+      "Article 1090 (p.158)",
+      "Article 226 (p.27)"
+    ]
+  },
+  {
+    "question": "متى تسقط دعوى المسئولية التقصيرية بالتقادم؟",
+    "contexts": [
+      {
+        "text": "مادة٢٧١\n( ١ (تسقط بالتقادم دعوى التعويض الناشئة عن العمل غير المشروع\nبانقضاء ثلاث سنوات من اليوم الذى علم فيه المضرور بحدوث الفور\nوبالشخص المسئول عنه. وتسقط هذه الدعوى فى كل حال ، بإنقضاء خمس\nعشرة سنة من يوم وقوع العمل غير المشروع.\n( ٢ (على انه إذا كانت هذه الدعوى ناشئة عن جريمة ، وكانت الدعوى\nالجنائية لم تسقط بعد انقضاء المواعيد المذكورة فى الفقرة السابقة ، فإن\nدعوى التعويض لا تسقط الا بسقوط الدعوى الجنائية.\nArticle 172\nAn action for damages arising from an unlawful act is\nprescribed after three years from the date upon which\nthe victim knew of the injury and identity of the person\nwho was responsible. An action for damages is\nprescribed in any case after fifteen years from the date\non which the unlawful act was committed.\nWhen a claim arises out of a penal offence and the penal\naction is not prescribed after the delays set out in the\npreceding paragraph, the action for damages is only\nprescribed when the penal action itself is prescribed.\n٢ - المسئولية عن عمل الغير 2- Liability arising from the acts of another",
+        "article": 172,
+        "page": 19,
+        "section": "SECTION III",
+        "score": 0.7104055881500244
+      },
+      {
+        "text": "مادة٢٤٩\n(١ (إعلان الرغبة بالأخذ بالشفعة يجب أن يكون رسميا وإلا كان باطلا .\nولا يكون هذا الإعلان حجة على الغير إلا إذا سجل .\n)٢ (وخلال ثلاثين يوما على الأكثر من تاريخ هذا الاعلان يجب أن يودع\nخزانة المحكمة الكائن فى دائرتها العقار كل الثمن الحقيقى الذى حصل بع\nالبيع ، مع مراعاة أن يكون هذا الإيداع قبل رفع الدعوى بالشفعة ، فإن لم\nيتم الإيداع فى هذا الميعاد على الوجه المتقدم سقط حق الأخذ بالشفعة.\nArticle 942\nNotification of intention to exercise the right of\npreemption must, on pain of nullity, be made through\nthe Court. It is not valid as against third parties unless it\nis transcribed.\nThe actual sale price must, within thirty days at the most\nfrom the date of this notification, be deposited in full at\nthe Caisse of the Court of the district in which the\nproperty is situated, and in any event before the\nintroduction of the action in preemption. If this deposit\nis not made within the prescribed time and manner, the\nright of preemption shall be forfeited.",
+        "article": 942,
+        "page": 135,
+        "section": "الفصل الثاني",
+        "score": 0.6714972257614136
+      },
+      {
+        "text": "مادة٤٧٢\n(١ (إذا كان الالتزام مقترنا بأجل واقف ، فانه لا يكون نافذا إلا في الوقت\nالذي ينقضي فيه الأجل ، على أنه يجوز للدائن حتى قبل انقضاء الأجل أن\nيتخذ من الإجراءات ما يحافظ به على حقوقه ، وله بوجه خاص أن يطالب\nبتأمين إذا يخشى إفلاس المدين أو إعساره واستند في ذلك إلى سبب\nمعقول.\n(٢ (ويترتب على انقضاء الأجل الفاسخ زوال الالتزام ، دون أن يكون لهذا\nالزوال اثر رجعي.\nArticle 274\nAn obligation with a suspensive term only becomes due\non the date of the expiration of the term. The creditor\nmay, however, even before the end of the term, take\nmeasures to protect his rights and may, in particular, ask\nfor security if he fears that the debtor may become\nbankrupt or insolvent, and has reasonable grounds for\nhis fears.\nAt the end of a resolutory term, the obligation is\nextinguished without such extinction having any\nretroactive effect.\nالفصل الثاني\nتعدد محل الالتزام\nSection II\nPlurality of Objects of an Obligation\n١ -الالتزام التخييرى 1. Alternative Obligations",
+        "article": 274,
+        "page": 35,
+        "section": "الفصل الأول",
+        "score": 0.6052289009094238
+      }
+    ],
+    "answer": "Based on the retrieved text (Article 172, p. 19): مادة٢٧١ ( ١ (تسقط بالتقادم دعوى التعويض الناشئة عن العمل غير المشروع بانقضاء ثلاث سنوات من اليوم الذى علم فيه المضرور بحدوث الفور وبالشخص المسئول عنه. وتسقط هذه الدعوى فى كل حال ، بإنقضاء خمس عشرة سنة من يوم وقوع العمل غير المشروع. ( ٢ (على انه إذا كانت هذه الدعوى ناشئة عن جريمة ، وكانت الدعوى الجنائية لم تسقط بعد انقضاء المواعيد المذكورة فى الفقرة السابقة ، فإن دعوى التعويض لا تسقط الا بسقوط الدعوى الجنائية. Article 172 An action for damages arising from an unlawful act is prescribed after thre...",
+    "sources": [
+      "Article 172 (p.19)",
+      "Article 942 (p.135)",
+      "Article 274 (p.35)"
+    ]
+  },
+  {
+    "question": "ما هو الموطن المختار وكيف يثبت؟",
+    "contexts": [
+      {
+        "text": "مادة٦٥٨\n(١ (إذا تعدد ملاك طبقات الدار أو شققها المختلفة فأ\nم يعدون شركاء فى\nملكي الأرض وملكية أجزاء البناء المعدة للاستعمال المشترك بين الجميع ،\nوبوجه خاص الأساس والجدران الرئيسية والمداخل والأفنية والأسطح\nوالصاعد والممرات والدهاليز وقواعد الأرضيات وكل أنواع الأنابيب إلا\nما كان منها داخل الطبقة أو الشقة ، كل هذا ما لم يوجد فى سندات الملك ما\nيخالفه .\n(٢ (وهذه الأجزاء المشتركة من الدار لا تقبل القسمة ، ويكون نصيب كل\nمالك فيها بنسبة قيمة الجزء الذى له فى الدار ، وليس لمالك أن يتصرف\nفى نصيبه هذا مستقلا عن الجزء الذى يملكه\n(٣ (والحواجز الفاصلة بين شقتين تكون ملكيتها مشتركة بين أصحاب\nهاتين الشقتين .\nArticle 856\nIn the absence of any provisions to the contrary in the\ntitle deeds, when the different storeys or various\napartments of a building belong to different owners,\nsuch owners are considered co-owners of the ground\nand of the parts of the building intended for the\ncommon use of all, especially of the foundations, the\nmain walls, the main entrances, yards, roofs, lifts,\npassages, corridors, the floor supports and pipes of all\nkinds with the exception of pipes inside the storeys or\nthe apartments.\nThese parts of the building held in common cannot be\ndivided; each of the owners has a share in these parts in\nproportion to the value of his share in the building. No\nowner can dispose of his share in the parts held in\ncommon independently of his share in the building.\nThe inner walls which separate two apartments belong\nas a party property to the owners of these two\napartments.",
+        "article": 856,
+        "page": 121,
+        "section": "الفصل الأول",
+        "score": 0.49163445830345154
+      },
+      {
+        "text": "مادة٣٤١١\n(١ (أجرة المبانى والأراضي الزراعية لسنتين أو لمدة الإيجار إن قلت عن\nذلك ، وكل حق أخر للمؤجر بمقتضى عقد الإيجار ، يكون لها جميعا\nامتياز على ما يكون موجودا بالعين المؤجرة ومملوكا للمستأجر من منقول\nقابل للحجز ومن محصول زراعي .\n(٢ (ويثبت الامتياز ولو كانت المنقولات مملوكة لزوجة المستأجر أو كانت\nمملوكة للغير ولم يثبت أن المؤجر كان يعلم وقت وضعها فى العين\nالمؤجرة بوجود حق للغير عليها ، وذلك دون إخلال بالأحكام المتعلقة\nبالمنقولات المسروقة أو الضائعة .\n(٣ (ويقع الامتياز أيضا على المنقولات والمحصولات المملوكة للمستأجر\nمن الباطن إذا كان المؤجر قد اشترط صراحة عدم الإيجار من الباطن ،\nفإذا لم يشترط ذلك فلا يثبت الامتياز إلا للمبالغ التى تكون مستحقة\nللمستأجر الأصلى فى ذمة المستأجر من الباطن فى الوقت الذى ينذره فيه\nالمؤجر .\n(٤ (وتستوفى هذه المبالغ الممتازة من ثمن الأموال المثقلة بالامتياز بعد\nالحقوق المتقدمة الذكر ، إلا ما كان م ن هذه الحقوق غير نافذ فى حق\nالمؤجر باعتباره حائزا حسن النية .\n(٥ (وإذا نقلت الأموال المثقلة بالامتياز من العين المؤجرة على الرغم من\nمعارضة المؤجر أو على غير علم منه ولم يبق فى العين أمول كافية\nلضمان الحقوق الممتازة ، بقى الامتياز قائما على الأموال التى نقلت دون\nأن يضر ذلك بالحق الذى كسبه غير الحسن النية على هذه الأموال ، ويبقى\nArticle 1143\nHouse and agricultural rents for two years, or for the\nduration of the lease if less than two years, and all sums\ndue to the lessor by virtue of the contract of lease, are\nsecured by a privilege over all attachable movables and\ncrops existing on the leased property and belonging to\nthe lessee.\nSubject to the provisions relating to stolen or lost\nproperty, this privilege is enforceable even when the\nimmovables belong to the wife of the lessee or to a third\nparty, as long as it is not established that the lessor had\nknowledge, at the time the movables were brought onto\nthe leased property, of the existence of a third party's\nrights.\nThis privilege is also enforceable over movables and\ncrops belonging to a sub-lessee, if the lessor had\nexpressly prohibited sub-letting. If sub-letting was not\nprohibited, the privilege will only be enforceable up to\nthe amount due by the sub-lessee to the principal lessee\non the date a formal summons is served by the lessor\nupon the sub-lessee.\nThese privileged claims are payable out of the proceeds\nof sale of such movables and crops subject to such\nprivilege, immediately after the claims above mentioned,\nwith the exception of such claims in respect of which the\nالامتياز قائما ولو أضر بحق الغير لمدة ثلاث سنوات من يوم نقلها إذا أوقع\nالمؤجر عليها حجزا استحقاقيا فى الميعاد القانوني . ومع ذلك إذا بيعت هذه\nالأموال إلى مشتري حسن النية فى سوق عام أو فى مزاد على أو ممن\nيتجر فى مثلها ، وجب على المؤجر أن يرد الثمن إلى هذا المشترى .\nprivilege does not operate as against the lessor in as\nmuch as he is a third party holder in good faith.\nIf movables and crops so charged are removed from the\nleased property, notwithstanding the objection of the\nlessor or without his knowledge, and the movables\nremaining on the property are not sufficient to secure\nthe privileged claim, the privilege is enforceable on the\nmovables and crops so removed subject to rights\nacquired on these movables and crops by third parties in\ngood faith.\nThe privilege shall remain in force for three years from\nthe date of removal, even to the detriment of a third\nparty's rights, if the lessor effects within the prescribed\ntime limit an attachment on the movables and crops\nremoved. If, however, the movables and crops are sold\nto a purchaser in good faith in the market by public\nauction or by a merchant dealing in similar articles, the\nlessor must reimburse the purchaser with the price.",
+        "article": 1143,
+        "page": 167,
+        "section": "الفصل الثاني",
+        "score": 0.49010130763053894
+      },
+      {
+        "text": "مادة٣٢٩\n(١ (يكون ملكا خالصا لصاحب الأرض ما يحدثه فيها من بناء أو غراس\nأو منشآت أخرى يقيمها بمواد مملوكة لغيرة ، إذا لم يكن ممكنا نزع هذه\nالمواد دون أن يلحق هذه المنشآت ضرر جسيم ، أو كان ممكنا نزعها ولكن\nلم ترفع الدعوى باستردادها خلال سنة من اليوم الذى يعلم فيه مالك المواد\nأنها اندمجت فى هذه المنشآت .\n(٢ (فإذا تملك صاحب الأرض المواد ، كان عليه أن يدفع قيمته ا مع\nArticle 923\nConstructions, plantations and other works carried out\nwith materials belonging to another, become the\nexclusive property of the owner of the land when the\nremoval of these materials is not possible without\nseriously damaging the works, or even when it is possible\nto do so but proceedings to recover the property are not\nالتعويض إن كان له وجه . أما إذا استرد المواد صاحبها فإن نزعها يكون\nعلى نفقة صاحب الأرض .\ncommenced within a year from the date on which the\nowner of the materials knew of their incorporation in the\nworks.\nWhen the owner of the land acquires the property of the\nmaterials, he must pay their value together with an\nindemnity, if indemnity is due. When, however, the\nowner of the materials recovers the materials, their\nremoval must be effected at the cost of the owner of the\nland.",
+        "article": 923,
+        "page": 131,
+        "section": "الفصل الثاني",
+        "score": 0.47961968183517456
+      }
+    ],
+    "answer": "Based on the retrieved text (Article 856, p. 121): مادة٦٥٨ (١ (إذا تعدد ملاك طبقات الدار أو شققها المختلفة فأ م يعدون شركاء فى ملكي الأرض وملكية أجزاء البناء المعدة للاستعمال المشترك بين الجميع ، وبوجه خاص الأساس والجدران الرئيسية والمداخل والأفنية والأسطح والصاعد والممرات والدهاليز وقواعد الأرضيات وكل أنواع الأنابيب إلا ما كان منها داخل الطبقة أو الشقة ، كل هذا ما لم يوجد فى سندات الملك ما يخالفه . (٢ (وهذه الأجزاء المشتركة من الدار لا تقبل القسمة ، ويكون نصيب كل مالك فيها بنسبة قيمة الجزء الذى له فى الدار ، وليس لمالك أن يتصرف فى نصيبه هذا مست...",
+    "sources": [
+      "Article 856 (p.121)",
+      "Article 1143 (p.167)",
+      "Article 923 (p.131)"
+    ]
+  },
+  {
+    "question": "ما هي أحكام رهن الحيازة في القانون المدني؟",
+    "contexts": [
+      {
+        "text": "مادة ١\nيلغي القانون المدني المعمول به أمام المحاكم الوطنية والصادر في ٨٢ أكتوبر سنة\n٣٨٨١ والقانون المدني المعمول به أمام المحاكم المختلطة والصادر في ٨٢ يونيو\nسنة ٥٧٨١ ويستعاض عنهما بالقانون المدني المرافق لهذا القانون",
+        "article": -1,
+        "page": 0,
+        "section": "",
+        "score": 0.720274806022644
+      },
+      {
+        "text": "مادة٢٠٢\nالإلتزام الطبيعى يصلح سببا لإلتزام مدنى.\nArticle 202\nA natural obligation may constitute a valid cause for a\ncivil obligation.\nالفصل الأول\nالتنفيذ العيني\nSection I\nSpecific Performance",
+        "article": 202,
+        "page": 23,
+        "section": "CHAPTER II",
+        "score": 0.6482394933700562
+      },
+      {
+        "text": "مادة٤٧٢\n(١ (إذا كان الالتزام مقترنا بأجل واقف ، فانه لا يكون نافذا إلا في الوقت\nالذي ينقضي فيه الأجل ، على أنه يجوز للدائن حتى قبل انقضاء الأجل أن\nيتخذ من الإجراءات ما يحافظ به على حقوقه ، وله بوجه خاص أن يطالب\nبتأمين إذا يخشى إفلاس المدين أو إعساره واستند في ذلك إلى سبب\nمعقول.\n(٢ (ويترتب على انقضاء الأجل الفاسخ زوال الالتزام ، دون أن يكون لهذا\nالزوال اثر رجعي.\nArticle 274\nAn obligation with a suspensive term only becomes due\non the date of the expiration of the term. The creditor\nmay, however, even before the end of the term, take\nmeasures to protect his rights and may, in particular, ask\nfor security if he fears that the debtor may become\nbankrupt or insolvent, and has reasonable grounds for\nhis fears.\nAt the end of a resolutory term, the obligation is\nextinguished without such extinction having any\nretroactive effect.\nالفصل الثاني\nتعدد محل الالتزام\nSection II\nPlurality of Objects of an Obligation\n١ -الالتزام التخييرى 1. Alternative Obligations",
+        "article": 274,
+        "page": 35,
+        "section": "الفصل الأول",
+        "score": 0.6355130076408386
+      }
+    ],
+    "answer": "Based on the retrieved text (p. 0): مادة ١ يلغي القانون المدني المعمول به أمام المحاكم الوطنية والصادر في ٨٢ أكتوبر سنة ٣٨٨١ والقانون المدني المعمول به أمام المحاكم المختلطة والصادر في ٨٢ يونيو سنة ٥٧٨١ ويستعاض عنهما بالقانون المدني المرافق لهذا القانون",
+    "sources": [
+      "p.0",
+      "Article 202 (p.23)",
+      "Article 274 (p.35)"
+    ]
+  },
+  {
+    "question": "متى يعتبر الشخص كامل الأهلية لمباشرة حقوقه المدنية؟",
+    "contexts": [
+      {
+        "text": "مادة ١\nيلغي القانون المدني المعمول به أمام المحاكم الوطنية والصادر في ٨٢ أكتوبر سنة\n٣٨٨١ والقانون المدني المعمول به أمام المحاكم المختلطة والصادر في ٨٢ يونيو\nسنة ٥٧٨١ ويستعاض عنهما بالقانون المدني المرافق لهذا القانون",
+        "article": -1,
+        "page": 0,
+        "section": "",
+        "score": 0.6070632934570312
+      },
+      {
+        "text": "مادة٤٤(\n(١ (كل شخص بلغ سن الرشد متمتعا بقواه العقلية ، ولم يحجر عليه ،\nيكون كامل الأهلية لمباشرة حقوقه المدنية .\n)٢ (وسن الرشد هى إحدى وعشرون سنة ميلادية كاملة .\nArticle 44\nAll persons attaining majority in possession of their\nmental faculties and not under legal disability, have full\nlegal capacity to exercise their civil rights.\nThe majority of a person is fixed at twenty one years\ncompleted in accordance with the Gregorian calendar.",
+        "article": 44,
+        "page": 5,
+        "section": "SECTION II",
+        "score": 0.5603802800178528
+      },
+      {
+        "text": "مادة٢٠٢\nالإلتزام الطبيعى يصلح سببا لإلتزام مدنى.\nArticle 202\nA natural obligation may constitute a valid cause for a\ncivil obligation.\nالفصل الأول\nالتنفيذ العيني\nSection I\nSpecific Performance",
+        "article": 202,
+        "page": 23,
+        "section": "CHAPTER II",
+        "score": 0.5134106278419495
+      }
+    ],
+    "answer": "Based on the retrieved text (p. 0): مادة ١ يلغي القانون المدني المعمول به أمام المحاكم الوطنية والصادر في ٨٢ أكتوبر سنة ٣٨٨١ والقانون المدني المعمول به أمام المحاكم المختلطة والصادر في ٨٢ يونيو سنة ٥٧٨١ ويستعاض عنهما بالقانون المدني المرافق لهذا القانون",
+    "sources": [
+      "p.0",
+      "Article 44 (p.5)",
+      "Article 202 (p.23)"
+    ]
+  },
+  {
+    "question": "ما حكم القانون الواجب التطبيق على آثار عقد الزواج؟",
+    "contexts": [
+      {
+        "text": "مادة٢١ (\nيرجع في الشروط الموضوعية لصحة الزواج إلي قانون كل من الزوجين.\nArticle 12\nThe fundamental conditions relating to the validity of\nmarriage are governed by the (national) law of each of\nthe two spouses.",
+        "article": 12,
+        "page": 1,
+        "section": "SECTION I",
+        "score": 0.8079971075057983
+      },
+      {
+        "text": "مادة٣١(\n(١ (يسري قانون الدولة التي ينتمي إليها الزوج وقت انعقاد الزواج علي\nالآثار التي يرتبها عقد الزواج' بما في ذلك من أثر بالنسبة إلي المال.\n(٢ (أما الطلاق' ويسري علي التطليق والانفصال قانون الدولة التي ينتمي\nإليها الزوج وقت الدعوى.\nArticle 13\nThe effects of marriage, including its effects upon the\nproperty of the spouses, are regulated by the law of the\ncountry to which the husband belongs at the time of\nconclusion of the marriage. Repudiation of marriage is\ngoverned by the law of the country to which the\nhusband belongs at the time of repudiation, whereas\ndivorce and separation are governed by the law of the\ncountry to which the husband belongs at the time of the\ncommencement of the legal proceedings.",
+        "article": 13,
+        "page": 2,
+        "section": "SECTION I",
+        "score": 0.7363094091415405
+      },
+      {
+        "text": "مادة٢٣٨\nللشركاء الذين يملكون على الأقل ثلاثة أرباع المال الشائع ، أن يقرروا\nالتصرف فيه إذا استندوا فى ذلك إلى أسباب قوية على أن يعلنوا قراراتهم\nإلى باقى الشركاء . ولمن خالف من هؤلاء حق الرجوع إلى المحكمة خلال\nشهرين من وقت الإعلان . و للمحكمة عندما تكون قسمة المال الشائع\nضارة بمصالح الشركاء ، أن تقدر تبعا للظروف ما إذا كان التصرف واجبا\n.\nArticle 832\nCo-owners who possess three-quarters at least of the\nproperty held in common may decide to alienate the\nproperty, provided that their decision is founded on\nserious grounds and that the decision is notified to the\nother co-owners. A dissenting co-owner has a right of\naction before the Court within a delay of two months\nfrom the date of notification. The Court will decide, in\naccordance with the circumstances, in a case where the\npartition of the property held in common is contrary to\nthe interests of the coowners, whether the alienation of\nthe property should be carried out.",
+        "article": 832,
+        "page": 117,
+        "section": "الفصل الأول",
+        "score": 0.6314716935157776
+      }
+    ],
+    "answer": "Based on the retrieved text (Article 12, p. 1): مادة٢١ ( يرجع في الشروط الموضوعية لصحة الزواج إلي قانون كل من الزوجين. Article 12 The fundamental conditions relating to the validity of marriage are governed by the (national) law of each of the two spouses.",
+    "sources": [
+      "Article 12 (p.1)",
+      "Article 13 (p.2)",
+      "Article 832 (p.117)"
+    ]
+  },
+  {
+    "question": "كيف تتقادم حقوق الأطباء والصيادلة؟",
+    "contexts": [
+      {
+        "text": "مادة٤٧٣\nيتقادم الالتزام بانقضاء خمس عشرة سنة فيما عدا الحالات التي ورد عنها\nنص خاص في القانون وفيما عدا الاستثناءات التالية.\nArticle 374\nThe term of prescription for obligations is fifteen years\nwith the exception of those cases for which a special\nprovision is contained in the law and with the exception\nalso of the following cases.",
+        "article": 374,
+        "page": 49,
+        "section": "الفصل الثالث",
+        "score": 0.4333363473415375
+      },
+      {
+        "text": "مادة٦١٠١\n)١ (حق الارتفاق يكسب بعمل قانوني أو بالميراث .\n)٢ (ولا يكسب بالتقادم إلا الارتفاقات الظاهرة بما فيها حق المرور .\nArticle 1016\nThe right to a servitude is acquired by a legal disposition\nor by inheritance.\nOnly apparent servitudes, including rights of way, can be\nacquired by prescription.",
+        "article": 1016,
+        "page": 145,
+        "section": "الفصل الثالث",
+        "score": 0.43046805262565613
+      },
+      {
+        "text": "مادة٠٧٦\n)١ (إذا كان ملتزم المرفق محتكراً له احتكارا قانونياً أو فعلياً ، وجب عليه\nأن يحقق المساواة التامة بين عملائه سواء فى الخدمات العامة أو فى\nتقاضى الأجور .\n)٢ (ولا تحول المساواة دون أن تكون هناك معاملة خاصة تنطوي على\nتخفيض الأجور أو الإعفاء منها ، على أن ينتفع بهذه المعاملة من يطلب\nذلك ممن توافرت فيه شروط يعينها الملتزم بوجه عام . ولكن المساواة\nتحرم على الملتزم أن يمنح أحد عملائه ميزات يرفض منحها لآخرين .\n)٣ (وكل تمييز على خلاف ما تقضى به الفقرة السابقة ، يوجب على\nالملتزم أن يعوض الضرر الذى قد يصيب الغير من جراء ما يترتب على\nهذا التمييز من إخلال بالتوازن الطبيعي فى المنافسة المشروعة.\nArticle 670\nWhen the concessionaire of the public utility service\nenjoys a de jure or de facto monopoly service, he is\nbound to observe strict equality between consumers\nboth as regards the services rendered and the rates\ncharged.\nThe principle of equality does not exclude special\ntreatment involving the reduction of remittance of rates,\nprovided such treatment is granted to all persons who\napply therefor and who fulfill the general conditions laid\ndown by the concessionaire. The principle of equality\nentail, however, the prohibition of the concessionaire\nfrom granting to some consumers advantages which he\nrefuses to grant to others.\nAny discrimination granted contrary to the provisions of\nthe preceding paragraph renders the concessionaire\nliable to compensation for the loss which may be caused,\nas a result of such discrimination to third parties, by the\ndisturbance of the natural balance of fair competition.",
+        "article": 670,
+        "page": 91,
+        "section": "الفصل الأول",
+        "score": 0.42646580934524536
+      }
+    ],
+    "answer": "Based on the retrieved text (Article 374, p. 49): مادة٤٧٣ يتقادم الالتزام بانقضاء خمس عشرة سنة فيما عدا الحالات التي ورد عنها نص خاص في القانون وفيما عدا الاستثناءات التالية. Article 374 The term of prescription for obligations is fifteen years with the exception of those cases for which a special provision is contained in the law and with the exception also of the following cases.",
+    "sources": [
+      "Article 374 (p.49)",
+      "Article 1016 (p.145)",
+      "Article 670 (p.91)"
+    ]
+  },
+  {
+    "question": "ما هي أحكام الحق العيني الواقع على عقار؟",
+    "contexts": [
+      {
+        "text": "مادة٦٧٩\n)١ (من حاز بسبب صحيح منقولا أو حقا عينيا على منقول أو سندا لحامله\nفإنه يصبح مالكا له إذا كان حسن النية وقت حيازته .\n)٢ (فإذا كان حسن النية والسبب الصحيح قد توقر الذى الحائز فى اعتباره\nالشيء خاليا من التكاليف والقيود العينية ، فإنه بكسب الملكية خالصة منها .\n)٣ (الحيازة فى ذاتها قرينة على وجود السبب الصحيح وحسن النية ما لم\nالدليل على عكس ذلك .\nArticle 976\nA person in possession of a movable, of a real right over\na movable or of a bearer warranty by virtue of a just title\nbecomes the owner thereof if at the moment he\nacquired possession, he was of good faith.\nIf he enters into possession in good faith by virtue of a\njust title, in the belief of the thing is free of all charges\nand encumbrances, he acquires the thing free of such\ncharges and encumbrances.\nSubject to proof to the contrary, mere possession is a\npresumption of a just title and good faith.",
+        "article": 976,
+        "page": 140,
+        "section": "الفصل الثاني",
+        "score": 0.6526541709899902
+      },
+      {
+        "text": "مادة٤٩٤\n(١ (لا يضمن الواهب استحقاق الشيء الموهوب ، إلا إذا تعمد إخفاء سبب\nالاستحقاق أو كانت الهبة بعوض . وفي الحالة الأولي يقدر القاضي\nللموهوب له تعريضا عادلا عما أصابه من الضرر . وفي الحالة الثانية لا\nيضمن الواهب الاستحقاق إلا بقدر ما أداه الموهوب له من عوض . كل هذا\nما لم يتفق على غيره.\n(٢ (وإذا استحق الشيء الموهوب حل الموهوب اله المحل الراهب فيما له\nمن حقوق ودعاوى.\nArticle 494\nUnless otherwise agreed, a donor is under no obligation\nof warranty against dispossession unless he has\nintentionally hidden the cause of dispossession or unless\nthe gift has been made for valuable consideration. In the\nfirst case, the judge will award the donee equitable\ncompensation for the prejudice that he has suffered. In\nthe second case, the donor is only bound up to the value\nof the consideration paid by the donee.\nIn a case of dispossession, the donee is subrogated into\nthe rights and actions of the donor.",
+        "article": 494,
+        "page": 63,
+        "section": "الفصل الثالث",
+        "score": 0.6262252926826477
+      },
+      {
+        "text": "مادة٧٤٢\n(١ (مجرد الحق في حبس الشيء لا يثبت حق امتياز عليه.\n(٢ (وعلي الحابس أن يحافظ علي الشيء وفقا لأحكام رهن الحيازة عليه أن\nيقدم حسابا عن غلته.\n(٣ (اذا كان الشيء المحبوس يخشي عليه الهلاك أو التلف فللحابس أن\nيحصل علي اذن من القضاء في بيعه وفقا للأحكام المنصوص عليها في\nالمادة ١١١٩، وينتقل الحق في الحبس من الشيء الي ثمنه.\nArticle 247\nA mere right of retention does not imply a privilege upon\nthe thing.\nA person who retains the thing must preserve the thing\nin accordance with the rules as to pledge and must\nrender an account of the fruits.\nIf the thing retained is of a perishable nature or\nsusceptible of deterioration, the person who retains the\nthing may obtain from the court authority for its sale in\naccordance with the provisions of Article 1119. The right\nof retention will then be transferred to the price thereof.",
+        "article": 247,
+        "page": 30,
+        "section": "الفصل الثالث",
+        "score": 0.6031684279441833
+      }
+    ],
+    "answer": "Based on the retrieved text (Article 976, p. 140): مادة٦٧٩ )١ (من حاز بسبب صحيح منقولا أو حقا عينيا على منقول أو سندا لحامله فإنه يصبح مالكا له إذا كان حسن النية وقت حيازته . )٢ (فإذا كان حسن النية والسبب الصحيح قد توقر الذى الحائز فى اعتباره الشيء خاليا من التكاليف والقيود العينية ، فإنه بكسب الملكية خالصة منها . )٣ (الحيازة فى ذاتها قرينة على وجود السبب الصحيح وحسن النية ما لم الدليل على عكس ذلك . Article 976 A person in possession of a movable, of a real right over a movable or of a bearer warranty by virtue of a just title becomes the owner ...",
+    "sources": [
+      "Article 976 (p.140)",
+      "Article 494 (p.63)",
+      "Article 247 (p.30)"
+    ]
+  }
+]

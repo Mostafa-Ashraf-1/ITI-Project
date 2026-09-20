@@ -1,0 +1,4 @@
+{
+  "sentence_transformers": true,
+  "chromadb": true
+}

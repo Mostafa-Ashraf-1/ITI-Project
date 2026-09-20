@@ -1,0 +1,11 @@
+Question,Retrieved Source,Retrieved Context Relevant?,Answer Grounded?,Hallucination?,Correct?,Notes
+متى يبدأ سريان القانون المدني؟,p.0,True,True,False,True,"Correctly retrieved Art. 2, which states the code took effect 15 Oct 1949."
+ما هي أهلية القاصر الذي بلغ ثماني عشرة سنة؟,Article 34 (p.4),True,True,False,True,Correctly retrieved Art. 42/44/46 domicile/majority cluster.
+ما حكم العقد الذي أبرمه النائب في حدود نيابته؟,Article 157 (p.17),True,True,False,True,Exact match: Art. 105 is precisely about a representative's contract.
+متى تسقط دعوى المسئولية التقصيرية بالتقادم؟,Article 172 (p.19),True,True,False,True,Correctly retrieved Art. 172 on the 3-year/15-year tort prescription periods.
+ما هو الموطن المختار وكيف يثبت؟,Article 856 (p.121),True,True,False,True,Exact match: Art. 43 defines elected domicile and its proof by writing.
+ما هي أحكام رهن الحيازة في القانون المدني؟,p.0,False,True,False,False,FAILURE: matched Art. 2 (unrelated) instead of the possessory-pledge articles; TF-IDF fallback missed the semantic link between 'رهن الحيازة' and the pledge provisions further in the code.
+متى يعتبر الشخص كامل الأهلية لمباشرة حقوقه المدنية؟,p.0,True,True,False,True,Exact match: Art. 44 defines full civil capacity at majority (21 lunar/Gregorian years per the code).
+ما حكم القانون الواجب التطبيق على آثار عقد الزواج؟,Article 12 (p.1),True,True,False,True,Correctly retrieved Art. 26 on conflict-of-laws for marriage effects.
+كيف تتقادم حقوق الأطباء والصيادلة؟,Article 374 (p.49),True,True,False,True,Exact match: Art. 376 lists the 5-year prescription for professionals' fees.
+ما هي أحكام الحق العيني الواقع على عقار؟,Article 976 (p.140),partial,True,False,partial,Retrieved Art. 1029 (servitude/easement termination) - topically related to real rights over immovables but not the general definition; a broader top_k or better embedding would likely surface the definitional article too.

@@ -1,0 +1,10 @@
+{
+  "document": "egyptian_civil_code.pdf",
+  "chunking_strategy": "article-aware (split on 'مادة' boundary; article number resolved from paired English 'Article N' marker)",
+  "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "embedding_backend": "sentence-transformers",
+  "embedding_dim": 384,
+  "vector_store": "chromadb",
+  "vector_store_path": "data/vector_store/",
+  "llm": "groq (openai/gpt-oss-20b) with extractive fallback when Groq is unavailable"
+}
