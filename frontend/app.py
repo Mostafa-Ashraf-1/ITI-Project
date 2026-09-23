@@ -3,7 +3,7 @@ from api_client import ask_question, check_health
 
 st.set_page_config(page_title="Egyptian Civil Code RAG Assistant", page_icon="⚖️", layout="centered")
 
-st.title("⚖️ Egyptian Civil Code Assistant")
+st.title("Egyptian Civil Code Assistant")
 st.caption("Ask a question about the Egyptian Civil Code (in Arabic or English). "
            "Answers are grounded strictly in retrieved text from the code, with sources cited.")
 

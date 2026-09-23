@@ -1,6 +1,6 @@
 # Egyptian Civil Code — Text-Based RAG Assistant
 
-**Track:** Core Track only (text-based RAG). No Extended Track, no computer vision, no OCR, no YOLO.
+**Track:** text-based RAG No Extended.
 
 ## 1. Project Overview
 

@@ -1,7 +1,9 @@
 import os
 import requests
+from dotenv import load_dotenv
 
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+load_dotenv()
+BACKEND_URL = os.getenv("BACKEND_URL")
 
 
 def check_health(timeout=5):
