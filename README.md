@@ -12,7 +12,7 @@ The system:
 - Cleans and structures the document into **article-aware chunks**.
 - Generates multilingual semantic embeddings using **sentence-transformers**.
 - Stores and retrieves legal passages using **ChromaDB**.
-- Builds grounded answers from the retrieved legal context.
+- Generates grounded answers from the retrieved legal context using **Groq**.
 - Includes article/page citations so retrieved evidence is traceable.
 - Supports an explicit fallback response when the required information is not present in the retrieved context.
 - Provides a **FastAPI backend** and **Streamlit frontend**.
@@ -84,19 +84,19 @@ The exported notebook artifacts currently record:
 | Embedding dimension | 384 |
 | Vector store | `ChromaDB` |
 | Vector store path | `backend/data/vector_store/` |
-| LLM | Groq |
+| LLM provider | Groq |
 | LLM model | `openai/gpt-oss-20b` |
 | Fallback generation | Extractive / retrieved-text based |
 
-The notebook automatically records the active embedding/vector-store availability and exports the resulting configuration to:
+The notebook exports the resulting pipeline configuration to:
 
 `backend/data/config.json`
 
-It also records Groq availability in:
+It also records Groq availability/model information in:
 
 `backend/data/groq_status.json`
 
-> **Important:** API keys are not stored in the repository. If Groq is unavailable, the pipeline uses the documented extractive fallback instead of inventing unsupported legal information.
+> **Important:** API keys are not stored in the repository. Configure the Groq API key through environment variables. If Groq is unavailable, the pipeline/API uses the documented extractive fallback instead of inventing unsupported legal information.
 
 ## 7. Project Structure
 
@@ -335,8 +335,8 @@ BACKEND_URL=http://localhost:8000
 | `VECTOR_STORE_DIR` | Persisted vector-store directory | `data/vector_store` |
 | `COLLECTION_NAME` | Chroma collection name | `egyptian_civil_code` |
 | `EMBEDDING_MODEL` | Sentence-transformers model | `paraphrase-multilingual-MiniLM-L12-v2` |
-| `OLLAMA_HOST` | Ollama server URL used by the current FastAPI generation service | `http://localhost:11434` |
-| `OLLAMA_MODEL` | Ollama model used by the current FastAPI generation service | `llama3.1` |
+| `GROQ_API_KEY` | API key used for Groq LLM generation | — |
+| `GROQ_MODEL` | Groq model used for generation | `openai/gpt-oss-20b` |
 | `DEFAULT_TOP_K` | Default number of retrieved chunks | `3` |
 | `ALLOWED_ORIGINS` | CORS origins | `*` |
 
@@ -406,7 +406,7 @@ Large generated artifacts are kept under `backend/data/` so the backend can load
 - Retrieval quality depends on the embedding model and Top-K value.
 - The evaluation set contains only 10 questions and should not be treated as a comprehensive benchmark.
 - Some broad legal questions may require multiple retrieved articles rather than a single top result.
-- The notebook pipeline uses Groq for LLM generation when available, while the current FastAPI generation service in `backend/app/services/generation.py` is configured around Ollama with an extractive fallback. These are separate generation paths and should be kept consistent if the deployment target is changed.
+- Groq is the intended LLM backend for the project, with an extractive fallback when Groq is unavailable.
 - This is a technical RAG project over a legal document; it does not provide professional legal advice.
 
 ## 19. Future Improvements
@@ -422,4 +422,4 @@ Large generated artifacts are kept under `backend/data/` so the backend can load
 ---
 
 **Project:** Egyptian Civil Code Text-Based RAG Assistant  
-**Repository:** https://github.com/abdooashraf49-arch/ITI-Project
+**Repository:** https://github.com/Mostafa-Ashraf-1/ITI-Project
