@@ -237,7 +237,7 @@ Invalid questions are rejected through the Pydantic request schema.
 ## 11. Backend Installation
 
 ```bash
-git clone https://github.com/abdooashraf49-arch/ITI-Project.git
+git clone https://github.com/Mostafa-Ashraf-1/ITI-Project.git
 cd ITI-Project/backend
 
 python -m venv .venv
@@ -265,6 +265,13 @@ Copy the environment template:
 
 ```bash
 cp .env.example .env
+```
+
+Set your Groq credentials in `.env`:
+
+```env
+GROQ_API_KEY=your_groq_api_key
+GROQ_MODEL=openai/gpt-oss-20b
 ```
 
 Run FastAPI:
@@ -394,12 +401,13 @@ Large generated artifacts are kept under `backend/data/` so the backend can load
 ### Option B — Full Application
 
 1. Prepare the exported backend data.
-2. Install backend dependencies.
-3. Start FastAPI.
-4. Start Streamlit.
-5. Open the Streamlit application.
-6. Ask questions in Arabic or English.
-7. Inspect the returned answer and source articles/pages.
+2. Configure the Groq API key.
+3. Install backend dependencies.
+4. Start FastAPI.
+5. Start Streamlit.
+6. Open the Streamlit application.
+7. Ask questions in Arabic or English.
+8. Inspect the returned answer and source articles/pages.
 
 ## 18. Limitations
 
@@ -416,7 +424,7 @@ Large generated artifacts are kept under `backend/data/` so the backend can load
 - Expand the evaluation set with more legal questions.
 - Add conversational multi-turn retrieval.
 - Add richer source previews and direct page navigation.
-- Unify the notebook's Groq generation path with the deployed API generation service.
+- Improve production configuration and deployment.
 - Add authentication and production deployment configuration.
 
 ---
