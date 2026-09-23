@@ -1,208 +1,206 @@
 # Egyptian Civil Code — Text-Based RAG Assistant
 
-**Track:** text-based RAG No Extended.
+**Track:** Core Track only (text-based RAG). No Extended Track, no computer vision, no OCR, no YOLO.
 
 ## 1. Project Overview
 
-A Retrieval-Augmented Generation (RAG) assistant that answers questions about the
-**Egyptian Civil Code** by retrieving the actual, relevant articles from the source
-document and generating an answer grounded strictly in that retrieved text, with
-citations to the article number and page it came from.
+A Retrieval-Augmented Generation (RAG) assistant for answering questions about the **Egyptian Civil Code**.
+
+The system:
+
+- Extracts the actual legal text from the source PDF.
+- Cleans and structures the document into **article-aware chunks**.
+- Generates multilingual semantic embeddings using **sentence-transformers**.
+- Stores and retrieves legal passages using **ChromaDB**.
+- Builds grounded answers from the retrieved legal context.
+- Includes article/page citations so retrieved evidence is traceable.
+- Supports an explicit fallback response when the required information is not present in the retrieved context.
+- Provides a **FastAPI backend** and **Streamlit frontend**.
 
 ## 2. Problem Statement
 
-Legal texts are long, dense, and hard to search by keyword alone. A lawyer, student,
-or citizen who wants to know "what does the Egyptian Civil Code say about X" has to
-either know the article number already or read through hundreds of pages. This
-project builds a semantic search + grounded-answer system over the Civil Code so a
-question in plain Arabic (or English) returns the exact governing article(s) and a
-answer that is traceable back to the source text — with an explicit "not found"
-response instead of a guess when the code doesn't address the question.
+Legal texts are long, dense, and difficult to search with keywords alone. A user may ask a question in natural Arabic or English without knowing the relevant article number.
+
+This project provides semantic retrieval over the Egyptian Civil Code and returns the most relevant legal text together with a grounded answer and source information.
+
+The core principle is **grounded generation**: the answer should be based on retrieved Civil Code text rather than unsupported outside knowledge.
 
 ## 3. Domain
 
-Egyptian Civil Law / Egyptian Civil Code (القانون المدني المصري).
+**Egyptian Civil Law / Egyptian Civil Code (القانون المدني المصري)**
 
-## 4. Dataset Description
+## 4. Dataset
 
-- **File:** `egyptian_civil_code.pdf`
-- **170 pages**, bilingual Arabic/English, native text layer (no OCR required)
-- **1,094 article-aware chunks** after cleaning — see `notebooks/rag_pipeline.ipynb`
-  Section 2–4 for the full, real inspection/cleaning/chunking log
-- Structure: every legal rule is marked with the Arabic word **"مادة" (Article)**,
-  followed a few lines later by an English cross-translation **"Article N"**, which
-  is what the chunker uses to resolve a reliable article number
+- **Source:** `egyptian_civil_code.pdf`
+- **Pages:** 170
+- **Language:** Bilingual Arabic / English
+- **Text layer:** Native text; OCR is not required.
+- **Chunks:** 1,094 article-aware chunks.
+- Legal article boundaries are detected using the Arabic **"مادة"** marker, while the paired English **"Article N"** marker is used to resolve the article number.
 
-## 5. RAG Architecture
+## 5. RAG Pipeline
 
-```
+```text
 Egyptian Civil Code PDF
         ↓
 PDF Text Extraction (pypdf)
         ↓
-Data Inspection
+Inspection & Cleaning
         ↓
-Text Cleaning (whitespace/newline normalization; article markers preserved)
+Article-aware Chunking
         ↓
-Article-aware Chunking (split on 'مادة', number resolved from 'Article N')
+Multilingual Embeddings
+(sentence-transformers)
         ↓
-Embeddings (sentence-transformers, multilingual)
+ChromaDB Vector Store
         ↓
-ChromaDB Vector Store (persisted to disk)
+Semantic Retrieval (Top-K)
         ↓
-Retriever (top-k cosine similarity)
-        ↓
-Relevant Legal Context
+Retrieved Legal Context
         ↓
 Grounded Prompt
         ↓
-Local Ollama LLM
+LLM Generation
+(Groq / openai/gpt-oss-20b)
         ↓
-Grounded Answer + Source / Citation
+Answer + Article/Page Sources
         ↓
 Evaluation
 ```
 
-Then wired into:
+The complete pipeline is implemented and executed in:
 
-```
-FastAPI Backend  →  Streamlit Frontend
-```
+`notebooks/rag_pipeline.ipynb`
 
-### ⚠️ About the notebook's embedding/vector-store/LLM backends
+## 6. Current Model / Backend Configuration
 
-The attached notebook was authored and **actually executed end-to-end** against the
-real PDF in a sandboxed environment whose network policy only allows a small
-allow-list of pip packages — `sentence-transformers`, `chromadb`, `fastapi`,
-`streamlit`, and `ollama` could not be installed there. Every relevant cell uses a
-try/except pattern: it always attempts the real, required library first, and only
-falls back to a local equivalent (TF-IDF+SVD embeddings, a NumPy-backed vector store
-with the same API shape as a Chroma collection, and a citation-only extractive
-answer composer) when that's unavailable — so every cell still runs and prints real,
-non-fabricated output. **In Google Colab, with normal internet access, re-running
-the same notebook automatically uses the real sentence-transformers + chromadb +
-Ollama stack — no code changes required.** This is called out explicitly in the
-printed output of Sections 5, 6, and 8 of the notebook.
+The exported notebook artifacts currently record:
 
-The `backend/app/services/retrieval.py` and `generation.py` modules use the exact
-same auto-detecting pattern, so the API works unchanged in either environment.
-
-## 6. Technology Stack
-
-| Layer | Technology |
+| Component | Current configuration |
 |---|---|
 | PDF extraction | `pypdf` |
-| Embeddings | `sentence-transformers` (`paraphrase-multilingual-MiniLM-L12-v2`) |
-| Vector store | `ChromaDB` (persistent) |
-| LLM | Local `Ollama` (default model: `llama3.1`) |
-| Backend | `FastAPI` |
-| Frontend | `Streamlit` |
-| Notebook | Jupyter / Google Colab |
+| Embedding model | `paraphrase-multilingual-MiniLM-L12-v2` |
+| Embedding backend | `sentence-transformers` |
+| Embedding dimension | 384 |
+| Vector store | `ChromaDB` |
+| Vector store path | `backend/data/vector_store/` |
+| LLM | Groq |
+| LLM model | `openai/gpt-oss-20b` |
+| Fallback generation | Extractive / retrieved-text based |
+
+The notebook automatically records the active embedding/vector-store availability and exports the resulting configuration to:
+
+`backend/data/config.json`
+
+It also records Groq availability in:
+
+`backend/data/groq_status.json`
+
+> **Important:** API keys are not stored in the repository. If Groq is unavailable, the pipeline uses the documented extractive fallback instead of inventing unsupported legal information.
 
 ## 7. Project Structure
 
-```
-rag-assistant-project/
+```text
+ITI-Project/
 ├── notebooks/
-│   └── rag_pipeline.ipynb        # executed end-to-end, real outputs saved inline
+│   ├── rag_pipeline.ipynb
+│   └── data/
+│       └── availability.json
+│
 ├── backend/
 │   ├── app/
 │   │   ├── main.py
 │   │   ├── api/routes/query.py
 │   │   ├── core/config.py
 │   │   ├── schemas/query.py
-│   │   ├── services/retrieval.py
-│   │   ├── services/generation.py
+│   │   ├── services/
+│   │   │   ├── retrieval.py
+│   │   │   └── generation.py
 │   │   └── utils/logging_config.py
-│   ├── data/                     # chunks.json, config.json, vector_store/
-│   ├── tests/test_query.py
+│   │
+│   ├── data/
+│   │   ├── chunks.json
+│   │   ├── config.json
+│   │   ├── evaluation.csv
+│   │   ├── embeddings.npy
+│   │   ├── embed_meta.json
+│   │   ├── groq_status.json
+│   │   ├── rag_results.json
+│   │   └── vector_store/
+│   │
+│   ├── tests/
+│   │   └── test_query.py
 │   ├── requirements.txt
 │   ├── .env.example
 │   └── Dockerfile
+│
 ├── frontend/
 │   ├── app.py
 │   ├── api_client.py
-│   ├── .env.example
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── .env.example
+│
 ├── README.md
 └── .gitignore
 ```
 
-## 8. Installation
+## 8. Notebook
 
-```bash
-git clone <your-repo-url>
-cd rag-assistant-project
-```
+The notebook is an **executed end-to-end RAG pipeline**, not only a collection of unexecuted code cells.
 
-## 9. Google Colab Notebook Instructions
+It covers:
 
-1. Open `notebooks/rag_pipeline.ipynb` in Google Colab.
-2. Upload `egyptian_civil_code.pdf` to the Colab file browser (or mount Drive).
-3. Run all cells top to bottom (`Runtime → Run all`). With internet access, Section 1's
-   `pip install` cell installs the real stack, and every later cell automatically
-   uses it instead of the local fallback.
-4. To use a real local LLM inside Colab:
-   ```bash
-   !curl -fsSL https://ollama.com/install.sh | sh
-   !ollama serve &
-   !ollama pull llama3.1
-   ```
-5. Section 11 exports `chunks.json`, `config.json`, and `data/vector_store/` —
-   copy these into `backend/data/` to power the API (already done for you with the
-   fallback-backend outputs from this run; re-run and re-copy after a Colab run with
-   the real stack for full-quality embeddings).
+1. Environment setup and dependency availability.
+2. PDF inspection and text extraction.
+3. Page-level cleaning.
+4. Article-aware chunking.
+5. Semantic embedding generation.
+6. Vector-store construction.
+7. Retrieval experiments.
+8. Grounded answer generation.
+9. Evaluation on real Civil Code questions.
+10. Export of backend-ready artifacts.
 
-## 10. Backend Instructions
+The notebook also documents the fallback behavior used when optional services are unavailable.
 
-```bash
-cd backend
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-uvicorn app.main:app --reload
-```
+## 9. Evaluation
 
-API docs: http://localhost:8000/docs
+The current evaluation uses **10 real questions** about the Egyptian Civil Code.
 
-Run tests:
-```bash
-pytest
-```
+| Metric | Result |
+|---|---:|
+| Fully relevant retrieval | **8 / 10 (80%)** |
+| Fully correct answers | **8 / 10 (80%)** |
+| Partial matches | **1 / 10** |
+| Clear failures | **1 / 10** |
+| Hallucinations in extractive fallback | **0 / 10** |
 
-## 11. Frontend Instructions
+### Known retrieval limitations
 
-```bash
-cd frontend
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-streamlit run app.py
-```
+One clear failure involved the question:
 
-## 12. Environment Variables
+> `ما هي أحكام رهن الحيازة في القانون المدني؟`
 
-**backend/.env**
-| Variable | Description | Default |
-|---|---|---|
-| `DATA_DIR` | Path to exported notebook data | `data` |
-| `VECTOR_STORE_DIR` | Path to persisted vector store | `data/vector_store` |
-| `COLLECTION_NAME` | Chroma collection name | `egyptian_civil_code` |
-| `EMBEDDING_MODEL` | sentence-transformers model | `paraphrase-multilingual-MiniLM-L12-v2` |
-| `OLLAMA_HOST` | Ollama server URL | `http://localhost:11434` |
-| `OLLAMA_MODEL` | Ollama model name | `llama3.1` |
-| `DEFAULT_TOP_K` | Default chunks retrieved | `3` |
-| `ALLOWED_ORIGINS` | CORS origins | `*` |
+The local fallback retrieval missed the semantic connection and retrieved an unrelated preamble article. A second test produced a partial match for a broader question about real rights over immovables.
 
-**frontend/.env**
-| Variable | Description | Default |
-|---|---|---|
-| `BACKEND_URL` | FastAPI backend URL | `http://localhost:8000` |
+The notebook identifies these cases explicitly and documents the expected improvement from semantic sentence embeddings.
 
-## 13. API Reference
+The detailed evaluation is available in:
 
-### `GET /health`
-Returns service status and index size.
+`backend/data/evaluation.csv`
+
+## 10. Backend
+
+The backend is implemented with **FastAPI**.
+
+### Main endpoints
+
+#### `GET /health`
+
+Returns the service status and number of indexed chunks.
+
+Example:
+
 ```json
 {
   "status": "ok",
@@ -212,68 +210,216 @@ Returns service status and index size.
 }
 ```
 
-### `POST /query`
-Request:
-```json
-{ "question": "ما هي أهلية القاصر الذي بلغ ثماني عشرة سنة؟", "top_k": 3 }
-```
-Response:
+#### `POST /query`
+
+Example request:
+
 ```json
 {
   "question": "ما هي أهلية القاصر الذي بلغ ثماني عشرة سنة؟",
-  "answer": "Based on the retrieved text (Article 42, p. 4): ...",
-  "sources": [
-    {"article": 42, "page": 4, "section": "SECTION II", "text_preview": "..."}
-  ],
-  "generation_backend": "extractive-fallback (no ollama server reachable)"
+  "top_k": 3
 }
 ```
-Invalid input (question missing or too short) → `HTTP 422`.
 
-## 14. Example Request
+The response contains:
+
+- The original question.
+- The generated answer.
+- Retrieved sources.
+- Article number when available.
+- Page number.
+- Section.
+- A short text preview.
+- The generation backend used.
+
+Invalid questions are rejected through the Pydantic request schema.
+
+## 11. Backend Installation
+
+```bash
+git clone https://github.com/abdooashraf49-arch/ITI-Project.git
+cd ITI-Project/backend
+
+python -m venv .venv
+```
+
+### Windows
+
+```bash
+.venv\\Scripts\\activate
+```
+
+### Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Copy the environment template:
+
+```bash
+cp .env.example .env
+```
+
+Run FastAPI:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+API documentation:
+
+```text
+http://localhost:8000/docs
+```
+
+Run tests:
+
+```bash
+pytest
+```
+
+## 12. Frontend
+
+The frontend is a Streamlit application.
+
+It provides:
+
+- Arabic / English question input.
+- Configurable Top-K retrieval.
+- Backend connection status.
+- Generated answer display.
+- Generation backend information.
+- Expandable article/page source sections.
+- Explicit messaging when the backend cannot be reached.
+
+Run it with:
+
+```bash
+cd frontend
+python -m venv .venv
+
+# Windows
+.venv\\Scripts\\activate
+
+# Linux / macOS
+source .venv/bin/activate
+
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+The frontend expects the backend URL through:
+
+`frontend/.env`
+
+with:
+
+```env
+BACKEND_URL=http://localhost:8000
+```
+
+## 13. Environment Variables
+
+### Backend
+
+| Variable | Description | Default |
+|---|---|---|
+| `DATA_DIR` | Exported RAG data directory | `data` |
+| `VECTOR_STORE_DIR` | Persisted vector-store directory | `data/vector_store` |
+| `COLLECTION_NAME` | Chroma collection name | `egyptian_civil_code` |
+| `EMBEDDING_MODEL` | Sentence-transformers model | `paraphrase-multilingual-MiniLM-L12-v2` |
+| `OLLAMA_HOST` | Ollama server URL used by the current FastAPI generation service | `http://localhost:11434` |
+| `OLLAMA_MODEL` | Ollama model used by the current FastAPI generation service | `llama3.1` |
+| `DEFAULT_TOP_K` | Default number of retrieved chunks | `3` |
+| `ALLOWED_ORIGINS` | CORS origins | `*` |
+
+### Frontend
+
+| Variable | Description | Default |
+|---|---|---|
+| `BACKEND_URL` | FastAPI backend URL | `http://localhost:8000` |
+
+## 14. Example API Request
 
 ```bash
 curl -X POST http://localhost:8000/query \
   -H "Content-Type: application/json" \
-  -d '{"question": "متى تسقط دعوى المسئولية التقصيرية بالتقادم؟", "top_k": 3}'
+  -d '{"question":"متى تسقط دعوى المسئولية التقصيرية بالتقادم؟","top_k":3}'
 ```
 
-## 15. Evaluation Results
+## 15. Grounding and Safety Design
 
-Evaluated on 10 real questions against the actual retrieved context (see notebook
-Section 10 for the full table and reasoning):
+The project is designed to reduce unsupported legal answers:
 
-| Metric | Result |
-|---|---|
-| Retrieval fully relevant | 8 / 10 (80%) |
-| Answers judged fully correct | 8 / 10 (80%) |
-| Partial matches | 1 / 10 |
-| Clear failures | 1 / 10 |
-| Hallucinations | 0 / 10 (0%, by construction of the extractive fallback) |
+- Retrieved context is explicitly included in the generation prompt.
+- The generation instructions prohibit inventing article numbers or legal rules.
+- Article and page metadata are returned with retrieved passages.
+- When the required information is not available in the retrieved context, the system is instructed to say so.
+- The extractive fallback only composes its answer from retrieved text.
 
-**Known failure case:** a question about "رهن الحيازة" (possessory pledge) matched
-an unrelated preamble article — a known weakness of the local TF-IDF fallback
-embedding versus a true semantic model; expected to improve with real
-`sentence-transformers` in Colab.
+This project is an educational RAG implementation and **not a substitute for professional legal advice**.
 
-## 16. Screenshots
+## 16. Data / Artifacts
 
-_Add screenshots of the Streamlit UI and API docs here after running the app locally._
+The repository contains the exported artifacts required by the implemented pipeline, including:
+
+- Article-aware chunks.
+- Embedding metadata.
+- Embedding arrays.
+- Evaluation results.
+- Retrieval results.
+- Configuration.
+- Persisted vector-store files.
+
+Large generated artifacts are kept under `backend/data/` so the backend can load the exported pipeline state directly.
 
 ## 17. How to Run the Complete Project
 
-1. Run the notebook (Colab, with internet) to produce `backend/data/`.
-2. Start the backend: `cd backend && uvicorn app.main:app --reload`.
-3. Start the frontend: `cd frontend && streamlit run app.py`.
-4. Open the Streamlit URL and ask a question about the Egyptian Civil Code.
+### Option A — Notebook
+
+1. Open `notebooks/rag_pipeline.ipynb`.
+2. Use Google Colab or a local Jupyter environment.
+3. Provide `egyptian_civil_code.pdf`.
+4. Run the notebook from top to bottom.
+5. Inspect the retrieval and evaluation outputs.
+6. The notebook exports the backend artifacts under `backend/data/`.
+
+### Option B — Full Application
+
+1. Prepare the exported backend data.
+2. Install backend dependencies.
+3. Start FastAPI.
+4. Start Streamlit.
+5. Open the Streamlit application.
+6. Ask questions in Arabic or English.
+7. Inspect the returned answer and source articles/pages.
 
 ## 18. Limitations
 
-- The notebook, as executed and attached, ran with **local fallbacks** for
-  embeddings, the vector store, and the LLM because the authoring sandbox blocks
-  installing `sentence-transformers` / `chromadb` / `ollama`. Re-run in Colab for
-  the full-quality, assignment-specified stack (auto-detected, no code changes).
-- The backend/frontend code has been syntax-checked but not run end-to-end in this
-  environment for the same reason (those packages aren't installable here either).
-- Retrieval quality with the fallback embedding is good (80% top-1 relevance on the
-  test set) but not perfect — see the documented failure case above.
+- Retrieval quality depends on the embedding model and Top-K value.
+- The evaluation set contains only 10 questions and should not be treated as a comprehensive benchmark.
+- Some broad legal questions may require multiple retrieved articles rather than a single top result.
+- The notebook pipeline uses Groq for LLM generation when available, while the current FastAPI generation service in `backend/app/services/generation.py` is configured around Ollama with an extractive fallback. These are separate generation paths and should be kept consistent if the deployment target is changed.
+- This is a technical RAG project over a legal document; it does not provide professional legal advice.
+
+## 19. Future Improvements
+
+- Improve semantic retrieval for difficult legal terminology.
+- Add reranking after initial vector retrieval.
+- Expand the evaluation set with more legal questions.
+- Add conversational multi-turn retrieval.
+- Add richer source previews and direct page navigation.
+- Unify the notebook's Groq generation path with the deployed API generation service.
+- Add authentication and production deployment configuration.
+
+---
+
+**Project:** Egyptian Civil Code Text-Based RAG Assistant  
+**Repository:** https://github.com/abdooashraf49-arch/ITI-Project
